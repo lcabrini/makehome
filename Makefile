@@ -1,4 +1,4 @@
-SUBDIRS = zsh
+SUBDIRS = vim zsh
 
 all:
 	@echo Making a happy home
