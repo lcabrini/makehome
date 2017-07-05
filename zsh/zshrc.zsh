@@ -12,6 +12,10 @@ alias ll='ls -l'
 alias la='ls -A'
 alias h=history
 
+# History
+setopt HIST_IGNORE_ALL_DUPS
+setopt SHARE_HISTORY
+
 # Remove duplicates from these arrays.
 typeset -U path cdpath
 
