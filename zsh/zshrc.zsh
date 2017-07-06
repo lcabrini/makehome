@@ -11,6 +11,7 @@ alias ls='ls --color -F'
 alias ll='ls -l'
 alias la='ls -A'
 alias h=history
+alias tree='tree -CF'
 
 # History
 setopt HIST_IGNORE_ALL_DUPS
