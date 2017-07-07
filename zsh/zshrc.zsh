@@ -33,6 +33,15 @@ colors
 
 PROMPT="%{$fg_bold[blue]%}%%%{$reset_color%} "
 
+# Git right prompt
+setopt PROMPT_SUBST
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' actionformats '%F{3}%s%f: [%b]'
+zstyle ':vcs_info:*' formats '%F{3}%s%f: [%b]'
+zstyle ':vcs_info:*' enable git
+precmd() { vcs_info }
+RPROMPT='${vcs_info_msg_0_}'
+
 watch=(notme)
 
 # Completion system.
