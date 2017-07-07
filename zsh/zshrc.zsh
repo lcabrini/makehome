@@ -41,15 +41,16 @@ zstyle ':vcs_info:*' actionformats \
     '[%F{255}%s%f:%F{11}%b%f:%F{12}%c%F{3}%u%f:%F{14}%m - %F{1}%a%f]'
 zstyle ':vcs_info:*' formats \
     '[%F{255}%s%f:%F{11}%b%f:%F{12}%c%F{3}%u%f:%F{14}%m%f]'
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
-zstyle ':vcs_info:git*+set-message:*' hooks git-remote-status
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-remote-status
+#zstyle ':vcs_info:git*+set-message:*' hooks git-remote-status
 zstyle ':vcs_info:*' enable git
+
 +vi-git-untracked() {
     local wt=$(git rev-parse --is-inside-work-tree 2> /dev/null)
     local gl=$(git ls-files --other --directory --exclude-standard | sed q | \
         wc -l | tr -d ' ')
 
-    if [[ $wt == 'true' ]] && [[ $gl -ge 1 ]]; then
+    if [[ $wt == 'true' && $gl -ge 1 ]]; then
         hook_com[unstaged]+='%F{1}?%f'
     fi
 }
