@@ -38,9 +38,9 @@ setopt PROMPT_SUBST
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' actionformats \
-    '[%F{255}%s%f:%F{11}%b%f %F{12}%c%F{3}%u%f %F{14}%m%f %F{1}%a%f]'
+    '[%F{255}%s%f:%F{11}%b%f:%F{12}%c%F{3}%u%f:%F{14}%m - %F{1}%a%f]'
 zstyle ':vcs_info:*' formats \
-    '[%F{255}%s%f:%F{11}%b%f %F{12}%c%F{3}%u%f %F{14}%m%f]'
+    '[%F{255}%s%f:%F{11}%b%f:%F{12}%c%F{3}%u%f:%F{14}%m%f]'
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 zstyle ':vcs_info:git*+set-message:*' hooks git-remote-status
 zstyle ':vcs_info:*' enable git
