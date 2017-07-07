@@ -36,9 +36,21 @@ PROMPT="%{$fg_bold[blue]%}%%%{$reset_color%} "
 # Git right prompt
 setopt PROMPT_SUBST
 autoload -Uz vcs_info
+zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' actionformats '%F{3}%s%f: [%b]'
-zstyle ':vcs_info:*' formats '%F{3}%s%f: [%b]'
+zstyle ':vcs_info:*' formats '%F{3}%s%f: [%b] %F{2}%c%F{3}%u%f'
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 zstyle ':vcs_info:*' enable git
++vi-git-untracked() {
+    local wt=$(git rev-parse --is-inside-work-tree 2> /dev/null)
+    local gl=$(git ls-files --other --directory --exclude-standard | sed q | \
+        wc -l | tr -d ' ')
+
+    if [[ $wt == 'true' ]] && [[ $gl -ge 1 ]]; then
+        hook_com[unstaged]+='%F{1}?%f'
+    fi
+}
+
 precmd() { vcs_info }
 RPROMPT='${vcs_info_msg_0_}'
 
