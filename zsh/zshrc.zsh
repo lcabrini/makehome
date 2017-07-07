@@ -42,7 +42,6 @@ zstyle ':vcs_info:*' actionformats \
 zstyle ':vcs_info:*' formats \
     '[%F{255}%s%f:%F{11}%b%f:%F{12}%c%F{3}%u%f:%F{14}%m%f]'
 zstyle ':vcs_info:git*+set-message:*' hooks git-untracked git-remote-status
-#zstyle ':vcs_info:git*+set-message:*' hooks git-remote-status
 zstyle ':vcs_info:*' enable git
 
 +vi-git-untracked() {
