@@ -12,7 +12,11 @@ alias ll='ls -l'
 alias la='ls -A'
 alias h=history
 alias tree='tree -CF'
-
+alias gc='git commit'
+alias gst='git status'
+alias gp='git push'
+alias gpl='git pull'
+alias ga='git add'
 # History
 setopt HIST_IGNORE_ALL_DUPS
 setopt SHARE_HISTORY
