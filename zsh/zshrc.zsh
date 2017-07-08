@@ -17,6 +17,7 @@ alias gst='git status'
 alias gp='git push'
 alias gpl='git pull'
 alias ga='git add'
+alias gl='git log'
 
 # History
 setopt HIST_IGNORE_ALL_DUPS
