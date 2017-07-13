@@ -4,10 +4,21 @@
 #
 # Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
 
+# We need to know which system we are on.
+if [[ $(uname) == "Linux" ]]; then
+    sys=linux
+elif [[ $(uname) == "FreeBSD" ]]; then
+    sys=bsd
+fi
+
 cdpath=(.. ~ ~/Git)
 
 # Aliases
-alias ls='ls --color -F'
+if [[ $sys == linux ]]; then
+    alias ls='ls --color -F'
+elif [[ $sys == bsd ]]; then
+    alias ls='ls -FG'
+fi
 alias ll='ls -l'
 alias la='ls -A'
 alias h=history
