@@ -11,7 +11,11 @@ elif [[ $(uname) == "FreeBSD" ]]; then
     sys=bsd
 fi
 
-cdpath=(.. ~ ~/Git)
+if [[ -d ~/Git ]]; then
+    cdpath=(.. ~ ~/Git)
+elif [[ -d ~/git ]]; then
+    cdpath=(.. ~ ~/git)
+fi
 
 # Aliases
 if [[ $sys == linux ]]; then
