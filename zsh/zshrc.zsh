@@ -33,7 +33,7 @@ alias gp='git push'
 alias gpl='git pull'
 alias ga='git add'
 alias gl='git log'
-alias yd='youtube-dl -f best -o "%(title)s-%(id)s-%(ext)s"'
+alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
 
 # History
 setopt HIST_IGNORE_ALL_DUPS
