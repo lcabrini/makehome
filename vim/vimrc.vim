@@ -30,3 +30,9 @@ endif
 if has("autocmd")
   filetype plugin indent on
 endif
+
+" If lightline is installed
+if isdirectory($HOME . "/.vim/pack/lightline")
+  set laststatus=2
+  set noshowmode
+endif
