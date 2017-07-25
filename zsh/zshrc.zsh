@@ -97,6 +97,9 @@ RPROMPT='${vcs_info_msg_0_}'
 
 watch=(notme)
 
+# Display directory contents after cd.
+chpwd() ls
+
 # Completion system.
 autoload -Uz compinit
 compinit
