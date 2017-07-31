@@ -100,6 +100,25 @@ watch=(notme)
 # Display directory contents after cd.
 chpwd() ls
 
+# Activate/deactive virtual environments
+do_venv() {
+    if [[ $PWD == $HOME/Git/* ]]; then
+        if [[ -z $ZSH_VENV && -d .venv ]]; then
+            ZSH_VENV=$PWD
+            source $ZSH_VENV/.venv/bin/activate
+        elif [[ -n $ZSH_VENV && $ZSH_VENV != $PWD ]]; then
+            deactivate
+            unset ZSH_VENV
+        fi
+    elif [[ -n $ZSH_VENV ]]; then
+        deactivate
+        unset ZSH_VENV
+    fi
+}
+
+autoload -U add-zsh-hook
+add-zsh-hook chpwd do_venv
+
 # Completion system.
 autoload -Uz compinit
 compinit
