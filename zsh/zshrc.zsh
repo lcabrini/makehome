@@ -106,7 +106,7 @@ do_venv() {
         if [[ -z $ZSH_VENV && -d .venv ]]; then
             ZSH_VENV=$PWD
             source $ZSH_VENV/.venv/bin/activate
-        elif [[ -n $ZSH_VENV && $ZSH_VENV != $PWD ]]; then
+        elif [[ -n $ZSH_VENV && $PWD != $ZSH_VENV* ]]; then
             deactivate
             unset ZSH_VENV
         fi
