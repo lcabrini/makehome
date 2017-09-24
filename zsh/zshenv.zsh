@@ -30,8 +30,10 @@ alias gl='git log'
 alias gd='git diff'
 alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
 
+export GOPATH=$HOME/Go
+
 typeset -U path
-path=(~/.local/bin $path)
+path=(~/.local/bin $GOPATH/bin $path)
 
 if [[ -n $(whence vim) ]]; then
     export EDITOR=vim
