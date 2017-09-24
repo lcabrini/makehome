@@ -30,7 +30,7 @@ alias gl='git log'
 alias gd='git diff'
 alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
 
-export GOPATH=$HOME/Go
+export GOPATH=$HOME/.go
 
 typeset -U path
 path=(~/.local/bin $GOPATH/bin $path)
