@@ -13,6 +13,10 @@ fi
 # History
 setopt HIST_IGNORE_ALL_DUPS
 setopt SHARE_HISTORY
+setopt APPEND_HISTORY INC_APPEND_HISTORY
+export HISTSIZE=2000
+export HISTFILE=$HOME/.history
+export SAVEHIST=$HISTSIZE
 
 # Remove duplicates from these arrays.
 typeset -U path cdpath
