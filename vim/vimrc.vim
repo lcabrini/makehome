@@ -32,7 +32,7 @@ if has("autocmd")
 endif
 
 " If lightline is installed
-if isdirectory($HOME . "/.vim/pack/lightline")
+if isdirectory($HOME . "/.vim/pack/plugins/start/lightline")
   set laststatus=2
   set noshowmode
 endif
