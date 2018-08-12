@@ -33,7 +33,7 @@ alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
 export GOPATH=$HOME/.go
 
 typeset -U path
-path=(~/.local/bin $GOPATH/bin $path)
+path=(~/.local/bin $GOPATH/bin ~/.composer/vendor/bin $path)
 
 if [[ -n $(whence vim) ]]; then
     export EDITOR=vim
