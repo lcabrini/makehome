@@ -29,6 +29,7 @@ alias ga='git add'
 alias gl='git log'
 alias gd='git diff'
 alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
+alias ta='task add'
 
 export GOPATH=$HOME/.go
 
