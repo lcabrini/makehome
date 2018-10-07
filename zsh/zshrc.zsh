@@ -21,6 +21,9 @@ export SAVEHIST=$HISTSIZE
 # Remove duplicates from these arrays.
 typeset -U path cdpath
 
+# Bindkey -v is too troublesome.
+bindkey -e
+
 # Set up colors for ls, grep, tree, etc.
 eval "$(dircolors -b)"
 
