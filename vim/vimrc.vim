@@ -11,6 +11,7 @@ set autowrite
 set hidden
 set history=50
 set ruler
+set number
 
 " Tabs and spaces
 set tabstop=8
