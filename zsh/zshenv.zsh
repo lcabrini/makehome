@@ -32,6 +32,7 @@ alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
 alias ta='task add'
 
 export GOPATH=$HOME/.go
+export GPODDER_HOME=~/.gPodder
 
 typeset -U path
 path=(~/.local/bin $GOPATH/bin ~/.config/composer/vendor/bin $path)
