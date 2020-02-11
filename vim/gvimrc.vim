@@ -10,7 +10,7 @@ set guioptions=-l
 set guioptions=-L
 
 " Set the font
-set guifont=Inconsolata\ 12
+set guifont=DejaVu\ Sans\ Mono\ 12
 
 " Stop the cursor from blinking
 set guicursor=a:block-blinkon0
