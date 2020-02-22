@@ -1,0 +1,12 @@
+URxvt*termName: screen-256color
+URxvt*geometry: 169x42 
+URxvt*background: Black
+URxvt*foreground: White
+URxvt*fading: 30
+URxvt*scrollStyle: plain
+URxvt*scrollBar_right: true
+
+URxvt*font: xft:Monospace-Regular:pixelsize=14:antialias=true
+URxvt*boldFont: xft:Monospace-Bold:pixelsize=14:antialias=true
+URxvt*italicFont: xft:Monospace-Italic:pixelsize=14:antialias=true
+URxvt*letterSpace: -1
