@@ -344,7 +344,7 @@
       <desktop>1</desktop>
     </application>
 
-    <application class="Zim">
+    <application class="Zim" type="normal">
       <decor>no</decor>
       <maximized>true</maximized>
       <desktop>2</desktop>
