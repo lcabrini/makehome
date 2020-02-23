@@ -1,2 +1,2 @@
 all:
-	cp rc.xml autostart ~/.config/openbox
+	cp rc.xml autostart environment ~/.config/openbox
