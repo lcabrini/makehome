@@ -1,4 +1,4 @@
-SUBDIRS = bin emacs git vim x zsh
+SUBDIRS = bin emacs git openbox vim x zsh
 
 all:
 	@echo Making a happy home
