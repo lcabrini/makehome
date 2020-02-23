@@ -338,6 +338,16 @@
   </mouse>
 
   <applications>
+    <application name="Lorenzo - Anki">
+      <position force="no">
+        <x>10</x>
+        <y>76</y>
+      </position>
+      <size>
+        <width>664</width>
+        <height>626</height>
+      </size>
+    </application>
     <application class="URxvt">
       <decor>no</decor>
       <maximized>true</maximized>
