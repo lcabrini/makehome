@@ -14,3 +14,7 @@ set guifont=DejaVu\ Sans\ Mono\ 12
 
 " Stop the cursor from blinking
 set guicursor=a:block-blinkon0
+
+" Force window size
+set columns=80
+set lines=25
