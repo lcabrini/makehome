@@ -70,7 +70,7 @@
     <number>8</number>
     <firstdesk>1</firstdesk>
     <popupTime>875</popupTime>
-  </desktop>
+  </desktops>
 
   <resize>
     <drawContents>yes</drawContents>
