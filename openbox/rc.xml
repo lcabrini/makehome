@@ -19,7 +19,7 @@
   <placement>
     <policy>Smart</policy>
     <center>yes</center>
-    <monity>Primary</monitor>
+    <monitor>Primary</monitor>
     <primaryMonitor>1</primaryMonitor>
   </placement>
 
@@ -206,8 +206,8 @@
       </action>
     </keybind>
 
-    <keybind key="S-W-e">
-      <action name="Exit">
+    <keybind key="S-W-x">
+      <action name="SessionLogout">
         <prompt>yes</prompt>
       </action>
     </keybind>
