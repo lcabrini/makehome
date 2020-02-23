@@ -1,11 +1,11 @@
-BINDIR = $(HOME)/.local/bin
+BINDIR = $(HOME)/bin
 SOURCES := $(wildcard *.zsh)
 SCRIPTS := $(SOURCES:%.zsh=$(BINDIR)/%)
 
 all: $(SCRIPTS)
-	vim-packages
+	#vim-packages
 
-$(BINDIR)/%: $(SOURCES) $(BINDIR)
+$(BINDIR)/%: %.zsh $(BINDIR)
 	cp $< $@
 	chmod +x $@
 
