@@ -234,6 +234,11 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
+    <keybind key="W-l">
+      <action name="Execute">
+        <command>xscreensaver-command -lock</command>
+      </action>
+    </keybind>
     <keybind key="W-t">
       <action name="Execute">
         <command>urxvt256c-ml -e tmux</command>
