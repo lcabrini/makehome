@@ -16,6 +16,7 @@
 
 ;; User interface
 (blink-cursor-mode 0)  ; Cursor, don't blink
+(tool-bar-mode -1)
 
 ;; Theme
 (load-theme 'wheatgrass t)
