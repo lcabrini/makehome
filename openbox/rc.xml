@@ -24,7 +24,7 @@
   </placement>
 
   <theme>
-    <name>Mistral-Thin-Dark</name>
+    <name>Onyx</name>
     <titleLayout>NDLSMC</titleLayout>
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
@@ -229,6 +229,11 @@
         <command>anki</command>
       </action>
     </keybind>
+    <keybind key="W-e">
+      <action name="Execute">
+	<command>emacs</command>
+      </action>
+    </keybind>
     <keybind key="W-f">
       <action name="Execute">
         <command>pcmanfm</command>
@@ -241,12 +246,12 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>urxvt256c-ml -e tmux</command>
+        <command>urxvt -e tmux</command>
       </action>
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>chromium-freeworld</command>
+        <command>chromium</command>
       </action>
     </keybind>
     <keybind key="W-z">
@@ -371,9 +376,12 @@
     <application class="URxvt">
       <decor>no</decor>
       <maximized>true</maximized>
+      <desktop>2</desktop>
+    </application>
+    <application name="emacs*" class="Emacs*" type="normal">
+      <decor>no</decor>
       <desktop>1</desktop>
     </application>
-
     <application class="Zim" type="normal">
       <decor>no</decor>
       <maximized>true</maximized>
