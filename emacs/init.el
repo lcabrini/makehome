@@ -28,3 +28,6 @@
 ;; C and related languages
 (require 'cc-mode)
 (setq c-default-style "linux")
+
+;; Org mode
+(setq org-agenda-files '("~/org"))
