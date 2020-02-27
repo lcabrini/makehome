@@ -25,9 +25,6 @@
 (require 'powerline)
 (powerline-default-theme)
 
-;; Get 256 colors in term
-(add-hook 'term-mode-hook #'eterm-256color-mode)
-
 ;; C and related languages
 (require 'cc-mode)
 (setq c-default-style "linux")
