@@ -373,6 +373,9 @@
         <height>626</height>
       </size>
     </application>
+    <application class="Chromium">
+      <desktop>3</desktop>
+    </application>
     <application class="URxvt">
       <decor>no</decor>
       <maximized>true</maximized>
