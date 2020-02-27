@@ -1,9 +1,11 @@
 ;; Personal Emacs configuration
 ;; Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
 
-;; MELPA package management
+;; Package management
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+			 ("melpa" . "https://melpa.org/packages/")
+			 ("melpa-stable" . "https://stable.melpa.org/packages/")))
 (package-initialize)
 
 ;; Set up UTF-8 environment
@@ -12,17 +14,11 @@
 ;; Start maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;; Set some sensible values
-(setq-default
- indent-tabs-mode nil) ; Don't use tabs for indenting
-
+;; User interface
 (blink-cursor-mode 0)  ; Cursor, don't blink
-(menu-bar-mode    -1)  ; No menubar
-(tool-bar-mode    -1)  ; No toolbar
-(scroll-bar-mode  -1)  ; No scrollbar
 
 ;; Theme
-(load-theme 'zenburn t)
+(load-theme 'wheatgrass t)
 
 ;; Powerline
 (require 'powerline)
@@ -30,3 +26,7 @@
 
 ;; Get 256 colors in term
 (add-hook 'term-mode-hook #'eterm-256color-mode)
+
+;; C and related languages
+(require 'cc-mode)
+(setq c-default-style "linux")
