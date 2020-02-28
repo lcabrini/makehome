@@ -2,4 +2,5 @@
 
 setxkbmap us &
 feh --randomize --bg-fill ~/img/wp
-xscreensaver -nosplash &
+picom &
+# xscreensaver -nosplash &
