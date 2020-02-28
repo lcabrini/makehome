@@ -31,3 +31,6 @@
 
 ;; Org mode
 (setq org-agenda-files '("~/org"))
+
+;; Gnus
+(setq nnrss-directory "~/news/rss")
