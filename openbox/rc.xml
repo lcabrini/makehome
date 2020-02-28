@@ -229,6 +229,11 @@
         <command>anki</command>
       </action>
     </keybind>
+    <keybind key="W-b">
+      <action name="Execute">
+	<command>feh --bg-fill --randomize ~/img/wp</command>
+      </action>
+    </keybind>
     <keybind key="W-e">
       <action name="Execute">
 	<command>emacs</command>
