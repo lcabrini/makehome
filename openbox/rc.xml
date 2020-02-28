@@ -251,7 +251,7 @@
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>firefox</command>
+        <command>firefox --class Firefox</command>
       </action>
     </keybind>
     <keybind key="W-z">
@@ -373,8 +373,10 @@
         <height>626</height>
       </size>
     </application>
-    <application class="Brave-browser">
+    <application class="Firefox" type="normal">
       <desktop>3</desktop>
+      <maximized>true</maximized>
+      <decor>no</decor>
     </application>
     <application class="URxvt">
       <decor>no</decor>
