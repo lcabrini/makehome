@@ -1,6 +1,6 @@
 #! /bin/sh
 
-PATH=$HOME/$PATH:$PATH
+PATH=$HOME/bin:$PATH
 SSHAGENT="/usr/bin/ssh-agent"
 SSHAGENTARGS="-s"
 
