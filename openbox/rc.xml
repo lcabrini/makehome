@@ -251,7 +251,7 @@
     </keybind>
     <keybind key="W-w">
       <action name="Execute">
-        <command>chromium</command>
+        <command>brave</command>
       </action>
     </keybind>
     <keybind key="W-z">
@@ -373,7 +373,7 @@
         <height>626</height>
       </size>
     </application>
-    <application class="Chromium">
+    <application class="Brave-browser">
       <desktop>3</desktop>
     </application>
     <application class="URxvt">
