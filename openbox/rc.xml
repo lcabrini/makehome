@@ -220,7 +220,7 @@
 
     <keybind key="A-F2">
       <action name="Execute">
-        <command>run-dialog</command>
+        <command>rofi -show run</command>
       </action>
     </keybind>
 
