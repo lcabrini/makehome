@@ -40,6 +40,12 @@
 (add-hook 'emacs-lisp-mode-hook
 	  (lambda() (setq indent-tabs-mode t)))
 
+;; Go
+(add-hook 'go-mode-hook
+	  (lambda () (setq indent-tabs-mode t
+			   tab-width 4)
+			   (add-hook 'before-save-hook 'gofmt-before-save)))
+
 ;; Org mode
 (setq org-agenda-files '("~/org"))
 
