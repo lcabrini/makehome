@@ -48,6 +48,13 @@
 
 ;; Org mode
 (setq org-agenda-files '("~/org"
+			 "~/org/clients"
+			 "~/org/edu"
+			 "~/org/lang"
+			 "~/org/os"
+			 "~/org/prog"
+			 "~/org/projects"
+			 "~/org/sw"
 			 "~/org/teaching"))
 
 ;; Gnus
