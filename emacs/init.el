@@ -47,7 +47,8 @@
 			   (add-hook 'before-save-hook 'gofmt-before-save)))
 
 ;; Org mode
-(setq org-agenda-files '("~/org"))
+(setq org-agenda-files '("~/org"
+			 "~/org/teaching"))
 
 ;; Gnus
 (setq nnrss-directory "~/news/rss")
