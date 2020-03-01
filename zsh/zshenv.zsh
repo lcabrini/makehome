@@ -38,7 +38,7 @@ typeset -U path
 path=(~/bin ~/.go/bin $path)
 
 typeset -U cdpath
-cdpath=(~/src ~/org ~/prog)
+cdpath=(~ ~/src ~/prog)
 
 if [[ -n $(whence vim) ]]; then
     export EDITOR=vim
