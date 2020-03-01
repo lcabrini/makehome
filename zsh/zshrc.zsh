@@ -4,12 +4,6 @@
 #
 # Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
 
-if [[ -d ~/Git ]]; then
-    cdpath=(.. ~ ~/Git)
-elif [[ -d ~/git ]]; then
-    cdpath=(.. ~ ~/git)
-fi
-
 # History
 setopt HIST_IGNORE_ALL_DUPS
 #setopt SHARE_HISTORY

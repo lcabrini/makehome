@@ -37,6 +37,9 @@ export GPODDER_HOME=~/.gPodder
 typeset -U path
 path=(~/bin ~/.go/bin $path)
 
+typeset -U cdpath
+cdpath=(~/src ~/org ~/prog)
+
 if [[ -n $(whence vim) ]]; then
     export EDITOR=vim
 else
