@@ -25,9 +25,20 @@
 (require 'powerline)
 (powerline-default-theme)
 
-;; C and related languages
-(require 'cc-mode)
-(setq c-default-style "linux")
+;; Smart tabs
+(smart-tabs-insinuate 'c)
+(setq-default indent-tabs-mode nil)
+
+;; C
+(add-hook 'c-mode-common-hook
+	  (lambda () (setq indent-tabs-mode t
+			   c-basic-offset 4
+			   tab-width 4
+			   c-default-style "bsd")))
+
+;; LISP
+(add-hook 'emacs-lisp-mode-hook
+	  (lambda() (setq indent-tabs-mode t)))
 
 ;; Org mode
 (setq org-agenda-files '("~/org"))
