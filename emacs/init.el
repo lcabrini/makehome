@@ -56,6 +56,7 @@
 			 "~/org/projects"
 			 "~/org/sw"
 			 "~/org/teaching"))
+(setq org-log-done 'time)
 
 ;; Gnus
 (setq nnrss-directory "~/news/rss")
