@@ -4,7 +4,7 @@ all:
 
 .PHONY: home
 home: prep
-	zsh install/install.zsh
+	@zsh install/install.zsh
 
 .PHONY: prep
 prep:

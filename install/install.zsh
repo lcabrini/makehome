@@ -11,3 +11,11 @@ yellow=$fg_bold[yellow]
 clear=$reset_color
 
 print ${yellow}Making a happy home.${clear} 
+
+[[ -d ~/bin ]] || mkdir ~/bin
+(
+    cd bin
+    for script in *.zsh; do
+        install $script ~/bin/${script:r}
+    done
+)
