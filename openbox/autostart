@@ -1,7 +1,22 @@
-#! /bin/sh
+#! /bin/zsh
 
+# Openbox autostart.
+# Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
+
+# I want this by default.
 setxkbmap us &
+
+# Random wallpaper.
 feh --randomize --bg-fill ~/img/wp
-picom &
+
+# Start the compositor, if one is installed.
+if [[ -z $(whence picom) ]]; then
+    picom &
+elif [[ -z $(whence compton) ]]; then
+    compton &
+fi
+
+# Start conky.
 conky &
+
 # xscreensaver -nosplash &
