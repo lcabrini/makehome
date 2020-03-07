@@ -1,9 +1,11 @@
-DESTDIR = $(HOME)/bin
-SOURCES := $(wildcard *.zsh)
-SCRIPTS := $(SOURCES:%.zsh=$(BINDIR)/%)
+DEST = $(HOME)/bin
+SRC := $(wildcard *.sh)
 
-all: $(DESTDIR)
-	@echo hello
+.PHONY: all
+all: $(DEST)
+	for script in $(SRC); do \
+	    install -c $$script $(DEST)/`basename $$script .sh`; \
+	done
 
-$(DESTDIR):
-	mkdir $(DESTDIR)
+$(DEST):
+	mkdir $(DEST)
