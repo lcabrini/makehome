@@ -8,7 +8,6 @@ if [ -z "`command -v ffprobe`" ]; then
 fi
 
 for video_file in *; do
-    #video_ext=$(printf "%s\n" "$video_file" | awk -F . '{ print $NF }')
     video_bn=${video_file%.*}
     audio_ext=$(ffprobe "$video_file" 2>&1 | grep Audio | awk '{ print $4 }')
     audio_file=$(echo "$video_bn" | tr -c 'A-Za-z0-9_-' _ | tr A-Z a-z |
