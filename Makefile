@@ -4,12 +4,11 @@ all:
 
 .PHONY: home
 home: prep
-	@zsh install/install.zsh
+	@echo "Done! Now you have a happy home"
 
 .PHONY: prep
 prep:
-	@which zsh > /dev/null 2>&1; \
-	if [ "$$?" -gt "0" ]; then \
+	@if [ -z "`command -v foobar`" ]; then \
 	    echo Please install zsh to make a happy home; \
 	    exit 1; \
 	fi
