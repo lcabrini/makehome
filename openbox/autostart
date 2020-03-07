@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /bin/sh
 
 # Openbox autostart.
 # Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
@@ -10,9 +10,9 @@ setxkbmap us &
 feh --randomize --bg-fill ~/img/wp
 
 # Start the compositor, if one is installed.
-if [[ -z $(whence picom) ]]; then
+if [ -n "`command -v picom`" ]; then
     picom &
-elif [[ -z $(whence compton) ]]; then
+elif [ -n "`command -v compton`" ]; then
     compton &
 fi
 
