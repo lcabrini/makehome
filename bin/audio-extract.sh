@@ -7,7 +7,12 @@ if [ -z "`command -v ffprobe`" ]; then
     printf "You must have ffmpeg installed to use this." >&2
 fi
 
-for video_file in *; do
+if [ "$#" -lt 1 ]; then
+    printf "usage: %s FILE ...\n" $(basename $0) >&2
+    exit 1
+fi
+
+for video_file in "$@"; do
     video_bn=${video_file%.*}
     audio_ext=$(ffprobe "$video_file" 2>&1 | grep Audio: | awk '{ print $4 }')
     audio_file=$(echo "$video_bn" | tr -c 'A-Za-z0-9_-' _ | tr A-Z a-z |
