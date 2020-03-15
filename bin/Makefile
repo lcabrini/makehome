@@ -1,4 +1,4 @@
-DEST = $(HOME)/bin
+DEST = $(HOME)/.local/bin
 SRC := $(wildcard *.sh)
 
 .PHONY: all
