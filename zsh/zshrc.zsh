@@ -68,7 +68,8 @@ zstyle ':vcs_info:*' enable git
 }
 
 precmd() { vcs_info }
-RPROMPT='${vcs_info_msg_0_}'
+inbox_count='[gtd inbox:%{$fg_bold[yellow]%}$(task +inbox +PENDING count)%{$reset_color%}]'
+RPROMPT=${inbox_count}' ${vcs_info_msg_0_}'
 
 watch=(notme)
 
