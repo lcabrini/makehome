@@ -1,4 +1,4 @@
-#! /bin/zsh
+#! /usr/bin/env zsh
 
 # Install and update vim packages.
 # Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
