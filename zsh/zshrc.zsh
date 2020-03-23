@@ -12,6 +12,26 @@ export HISTSIZE=2000
 export HISTFILE=$HOME/.history
 export SAVEHIST=$HISTSIZE
 
+# Aliases
+if [[ $sys == linux ]]; then
+    alias ls='ls --color -F'
+elif [[ $sys == bsd ]]; then
+    alias ls='ls -FG'
+fi
+alias ll='ls -l'
+alias la='ls -A'
+alias h=history
+alias tree='tree -CF'
+alias gc='git commit'
+alias gst='git status'
+alias gp='git push'
+alias gpl='git pull'
+alias ga='git add'
+alias gl='git log'
+alias gd='git diff'
+alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
+alias ta='task add'
+
 # Remove duplicates from these arrays.
 typeset -U path cdpath
 
