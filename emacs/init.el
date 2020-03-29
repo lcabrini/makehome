@@ -26,8 +26,8 @@
 (powerline-default-theme)
 
 ;; Smart tabs
-(smart-tabs-insinuate 'c)
-(setq-default indent-tabs-mode nil)
+;; (smart-tabs-insinuate 'c)
+;; (setq-default indent-tabs-mode nil)
 
 ;; C
 (add-hook 'c-mode-common-hook
@@ -47,16 +47,12 @@
 			   (add-hook 'before-save-hook 'gofmt-before-save)))
 
 ;; Org mode
-(setq org-agenda-files '("~/org"
-			 "~/org/clients"
-			 "~/org/edu"
-			 "~/org/lang"
-			 "~/org/os"
-			 "~/org/prog"
-			 "~/org/projects"
-			 "~/org/sw"
-			 "~/org/teaching"))
+(setq org-agenda-files '("~/Appunti/organizer.org"
+			 "~/Appunti/anki.org"))
+
 (setq org-log-done 'time)
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "STARTED(s)" "WAITING(w)" "|" "DONE(d)")))
 
 ;; Gnus
 (setq nnrss-directory "~/news/rss")
