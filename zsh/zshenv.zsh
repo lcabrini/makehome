@@ -16,10 +16,10 @@ export GOPATH=$HOME/.go
 export GPODDER_HOME=~/.gPodder
 
 typeset -U path
-path=(~/.local/bin ~/.go/bin $path)
+path=(~/bin ~/.go/bin $path)
 
 typeset -U cdpath
-cdpath=(~ ~/Git ~/Programmazione)
+cdpath=(~ ~/src ~/prog)
 
 if [[ -n $(whence vim) ]]; then
     export EDITOR=vim

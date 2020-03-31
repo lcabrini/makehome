@@ -46,6 +46,15 @@
 			   tab-width 4)
 			   (add-hook 'before-save-hook 'gofmt-before-save)))
 
+;; web-mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq web-mode-enable-engine-detection t)
+(defun my-web-mode-hook ()
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-markup-css-indent-offset 2))
+(add-hook 'web-mode-hook 'my-web-mode-hook)
+
 ;; Org mode
 (setq org-agenda-files '("~/Appunti/organizer.org"
 			 "~/Appunti/anki.org"))
@@ -56,3 +65,7 @@
 
 ;; Gnus
 (setq nnrss-directory "~/news/rss")
+
+(custom-set-variables
+ '(safe-local-variable-values (quote ((engine . django)))))
+

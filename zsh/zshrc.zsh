@@ -13,9 +13,9 @@ export HISTFILE=$HOME/.history
 export SAVEHIST=$HISTSIZE
 
 # Aliases
-if [[ $sys == linux ]]; then
+if [[ $SYS == linux ]]; then
     alias ls='ls --color -F'
-elif [[ $sys == bsd ]]; then
+elif [[ $SYS == bsd ]]; then
     alias ls='ls -FG'
 fi
 alias ll='ls -l'
