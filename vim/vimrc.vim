@@ -31,3 +31,6 @@ endif
 if has("autocmd")
   filetype plugin indent on
 endif
+
+" VimWiki
+let g:vimwiki_list = [{'path': '~/appunti'}]

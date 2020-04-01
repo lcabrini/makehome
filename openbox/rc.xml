@@ -386,7 +386,7 @@
     <application class="URxvt">
       <decor>no</decor>
       <maximized>true</maximized>
-      <desktop>2</desktop>
+      <desktop>1</desktop>
     </application>
     <application name="emacs*" class="Emacs*" type="normal">
       <decor>no</decor>
