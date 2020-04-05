@@ -31,6 +31,7 @@ I will do this when I get comfortable enough with Emacs keybindings
 
 * Org
 #+BEGIN_SRC emacs-lisp
+  (setq org-startup-indented t)
   (setq org-agenda-files '("~/org"
 			   "~/.emacs.d/settings.org"))
   (setq org-log-done 'time)
@@ -41,6 +42,12 @@ I will do this when I get comfortable enough with Emacs keybindings
 		    "|"
 		    "DONE(d)"
 		    "CANCELLED(c)")))
+
+  ;; org-bullets
+  (use-package org-bullets
+    :ensure t
+    :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 #+END_SRC
 
 ** TODO should I add POSTPONED to the keywords?
@@ -52,3 +59,5 @@ I will do this when I get comfortable enough with Emacs keybindings
 - [X] keybindings to zoom in/zoom out
 - [ ] follow links by hitting enter
 - [ ] don't ask which shell to run in =term=
+- [ ] install which-key package
+
