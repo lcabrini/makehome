@@ -12,6 +12,25 @@
   (load-theme 'wheatgrass t)
   (set-language-environment "UTF-8")
 #+END_SRC
+* Buffers
+#+BEGIN_SRC emacs-lisp
+  (setq ido-enable-flex-matching 1)
+  (setq ido-everywhere t)
+  (ido-mode 1)
+
+  (defalias 'list-buffers 'ibuffer-other-window)
+#+END_SRC
+* Windows
+#+BEGIN_SRC emacs-lisp
+  (use-package ace-window
+    :ensure t
+    :init
+    (progn
+      (global-set-key [remap other-window] 'ace-window)
+      (custom-set-faces
+       '(aw-leading-char-face
+         ((t (:inherit ace-jump-face-foreground :height 3.0)))))))
+#+END_SRC
 * Key bindings
 #+BEGIN_SRC emacs-lisp
 (global-set-key [C-mouse-4] 'text-scale-increase)
