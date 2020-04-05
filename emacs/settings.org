@@ -12,6 +12,17 @@
   (load-theme 'wheatgrass t)
   (set-language-environment "UTF-8")
 #+END_SRC
+* Fonts
+#+BEGIN_SRC emacs-lisp
+  (set-face-attribute 'default nil :font "DejaVu Sans Mono")
+  (set-fontset-font t 'latin "Noto Sans")
+  (set-fontset-font t 'chinese-gbk
+                    (font-spec :family "Noto Sans CJK SC"))
+  (set-fontset-font t 'japanese-jisx0213.2004-1
+                    (font-spec :family "Noto Sans CJK JP"))
+  (set-fontset-font t 'hangul
+                    (font-spec :family "Noto Sans CJK KR"))
+#+END_SRC
 * Buffers and windows
 #+BEGIN_SRC emacs-lisp
   (use-package ace-window
@@ -95,11 +106,11 @@ I will do this when I get comfortable enough with Emacs keybindings
     :config
     (which-key-mode))
 #+END_SRC
-* TODO configuration [2/5]                                        :@computer:
-- [ ] set up fonts [0/3]
-  - [ ] Korean
-  - [ ] Japanese
-  - [ ] Chinese
+* TODO configuration [3/5]                                        :@computer:
+- [X] set up fonts [3/3]
+  - [X] Korean
+  - [X] Japanese
+  - [X] Chinese
 - [X] keybindings to zoom in/zoom out
 - [ ] follow links by hitting enter
 - [ ] don't ask which shell to run in =term=
