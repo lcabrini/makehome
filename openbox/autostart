@@ -3,6 +3,9 @@
 # Openbox autostart.
 # Author: Lorenzo Cabrini <lorenzo.cabrini@gmail.com>
 
+# Swap CTRL and CAPS LOCK
+xmodmap ~/.xmodmap
+
 # I want this by default.
 setxkbmap us &
 
