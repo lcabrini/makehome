@@ -51,7 +51,14 @@ I will do this when I get comfortable enough with Emacs keybindings
 #+END_SRC
 
 ** TODO should I add POSTPONED to the keywords?
-* TODO configuration [1/4]                                        :@computer:
+* Which key
+#+BEGIN_SRC emacs-lisp
+  (use-package which-key
+    :ensure t
+    :config
+    (which-key-mode))
+#+END_SRC
+* TODO configuration [2/5]                                        :@computer:
 - [ ] set up fonts [0/3]
   - [ ] Korean
   - [ ] Japanese
@@ -59,5 +66,5 @@ I will do this when I get comfortable enough with Emacs keybindings
 - [X] keybindings to zoom in/zoom out
 - [ ] follow links by hitting enter
 - [ ] don't ask which shell to run in =term=
-- [ ] install which-key package
+- [X] install which-key package
 
