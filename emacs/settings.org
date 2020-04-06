@@ -106,6 +106,50 @@ I will do this when I get comfortable enough with Emacs keybindings
     :config
     (which-key-mode))
 #+END_SRC
+* Company
+#+BEGIN_SRC emacs-lisp
+  (use-package company
+    :ensure t
+    :init
+    (global-company-mode))
+#+END_SRC
+* Yasnippet
+#+BEGIN_SRC emacs-lisp
+  (use-package yasnippet
+    :ensure t
+    :init
+    (yas-global-mode 1))
+  (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
+#+END_SRC
+* Programming
+** Python
+#+BEGIN_SRC emacs-lisp
+  (use-package python
+    :ensure nil
+    :hook
+    ((python-mode . jedi:setup)))
+
+  (use-package pyvenv
+    :ensure t
+    :config
+    (pyvenv-mode 1))
+
+  (use-package company-jedi
+    :ensure t
+    :config
+    (add-to-list 'company-backends 'company-jedi))
+
+  (use-package elpy
+    :ensure t
+    :init
+    (elpy-enable))
+#+END_SRC
+
+*** TODO automaticall install required packages in virtual environment [0/4]
+- [ ] flake8
+- [ ] autopep8
+- [ ] jedi (is this needed?)
+- [ ] yapf
 * TODO configuration [3/5]                                        :@computer:
 - [X] set up fonts [3/3]
   - [X] Korean
