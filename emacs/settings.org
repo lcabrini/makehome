@@ -7,11 +7,16 @@
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'default-frame-alist '(fullscreen . maximized))
   (blink-cursor-mode 0)
+  (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   (load-theme 'wheatgrass t)
   (set-language-environment "UTF-8")
 #+END_SRC
+** DONE disable the menu bar
+CLOSED: [2020-04-07 mar 22:15]
+I will do this when I get comfortable enough with Emacs keybindings
+
 * Fonts
 #+BEGIN_SRC emacs-lisp
   (set-face-attribute 'default nil :font "DejaVu Sans Mono")
@@ -71,8 +76,6 @@
 (global-set-key [C-mouse-4] 'text-scale-increase)
 (global-set-key [C-mouse-5] 'text-scale-decrease)
 #+END_SRC
-** TODO disable the menu bar
-I will do this when I get comfortable enough with Emacs keybindings
 
 * Powerline
 #+BEGIN_SRC emacs-lisp
