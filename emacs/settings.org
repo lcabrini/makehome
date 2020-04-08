@@ -90,6 +90,7 @@ I will do this when I get comfortable enough with Emacs keybindings
 #+BEGIN_SRC emacs-lisp
   (setq org-startup-indented t)
   (setq org-agenda-files '("~/org"
+                           "~/org/lang"
                            "~/.emacs.d/settings.org"))
   (setq org-log-done 'time)
   (setq org-todo-keywords
@@ -187,6 +188,14 @@ I will do this when I get comfortable enough with Emacs keybindings
     (elfeed-org))
   (setq rmh-elfeed-org-files (list "~/org/feeds.org"))
 #+END_SRC
+* Matrix-client
+#+begin_src emacs-lisp
+  (use-package matrix-client
+    :quelpa (matrix-client
+             :fetcher github
+             :repo "alphapapa/matrix-client.el"
+             :files (:defaults "logo.png" "matrix-client-standalone.el.sh")))
+#+end_src
 * TODO configuration [3/5]                                        :@computer:
 - [X] set up fonts [3/3]
   - [X] Korean

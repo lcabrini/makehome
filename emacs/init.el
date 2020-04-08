@@ -13,5 +13,18 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+;; From Quelpa documentation
+(unless (package-installed-p 'quelpa)
+  (with-temp-buffer
+    (url-insert-file-contents "https://github.com/quelpa/quelpa/raw/master/quelpa.el")
+    (eval-buffer)
+    (quelpa-self-upgrade)))
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+
 (require 'org)
 (org-babel-load-file (expand-file-name "~/.emacs.d/settings.org"))
