@@ -196,6 +196,29 @@ I will do this when I get comfortable enough with Emacs keybindings
              :repo "alphapapa/matrix-client.el"
              :files (:defaults "logo.png" "matrix-client-standalone.el.sh")))
 #+end_src
+* PDF Tools
+#+begin_src emacs-lisp
+  (use-package pdf-tools
+    :ensure t
+    :config
+    (pdf-tools-install)
+    (setq-default pdf-view-display-size 'fit-page))
+
+  (use-package org-pdfview
+    :ensure t)
+#+end_src
+* Emacs Application Framework
+Requires some out-of-emacs setup. I used =yay -S emacs-eaf=.
+#+begin_src emacs-lisp
+  (use-package eaf
+    :load-path "/usr/share/emacs/site-lisp/eaf"
+    :custom
+    (eaf-find-alternate-file-in-dired t)
+    :config
+    (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
+    (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
+    (eaf-bind-key take_photo "p" eaf-camera-keybinding))
+#+end_src
 * TODO configuration [3/5]                                        :@computer:
 - [X] set up fonts [3/3]
   - [X] Korean
