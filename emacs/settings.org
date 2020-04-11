@@ -10,8 +10,14 @@
   (menu-bar-mode -1)
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
-  (load-theme 'wheatgrass t)
+  ;;(load-theme 'wheatgrass t)
+  (use-package zenburn-theme
+    :ensure t
+    :init
+    (load-theme 'zenburn t))
   (set-language-environment "UTF-8")
+  (global-hl-line-mode t)
+  (global-prettify-symbols-mode t) 
 #+END_SRC
 ** DONE disable the menu bar
 CLOSED: [2020-04-07 mar 22:15]
@@ -39,6 +45,14 @@ I will do this when I get comfortable enough with Emacs keybindings
        '(aw-leading-char-face
          ((t (:inherit ace-jump-face-foreground :height 3.0)))))))
 #+END_SRC
+* Ansi term
+#+begin_src emacs-lisp
+  (defvar my-term-shell "/bin/zsh")
+  (defadvice ansi-term (before force-zsh)
+    (interactive (list my-term-shell)))
+  (ad-activate 'ansi-term)
+  (global-set-key (kbd "<s-return>") 'ansi-term)
+#+end_src
 * Swiper
 #+BEGIN_SRC emacs-lisp
   (use-package counsel
@@ -110,6 +124,9 @@ I will do this when I get comfortable enough with Emacs keybindings
     :ensure t)
   (setq org-drill-add-random-noise-to-intervals-p t)
   (setq org-drill-scope 'directory)
+  (setq org-drill-learn-fraction 0.4)
+  (setq org-drill-maximum-items-per-session 50)
+  (setq org-drill-maximum-duration 30)
 #+END_SRC
 * Which key
 #+BEGIN_SRC emacs-lisp
@@ -205,6 +222,11 @@ I will do this when I get comfortable enough with Emacs keybindings
     (setq-default pdf-view-display-size 'fit-page))
 
   (use-package org-pdfview
+    :ensure t)
+#+end_src
+* Pass
+#+begin_src emacs-lisp
+  (use-package pass
     :ensure t)
 #+end_src
 * Emacs Application Framework
