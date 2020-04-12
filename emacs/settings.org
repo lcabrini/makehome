@@ -179,6 +179,20 @@ I will do this when I get comfortable enough with Emacs keybindings
 - [ ] autopep8
 - [ ] jedi (is this needed?)
 - [ ] yapf
+** Web-mode
+#+begin_src emacs-lisp
+  (use-package web-mode
+    :ensure t
+    :mode (".html?$")
+    :config
+    (setq
+     web-mode-markup-indent-offset 2
+     web-mode-css-indent-offset 2
+     web-mode-code-indent-offset 2
+     web-mode-enable-auto-closing t
+     web-mode-enable-auto-opening t
+     web-mode-enable-auto-indentation t))
+#+end_src
 * EMMS
 #+BEGIN_SRC emacs-lisp
   (use-package emms
@@ -241,13 +255,13 @@ Requires some out-of-emacs setup. I used =yay -S emacs-eaf=.
     (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
     (eaf-bind-key take_photo "p" eaf-camera-keybinding))
 #+end_src
-* TODO configuration [3/5]                                        :@computer:
+* TODO configuration [4/5]                                        :@computer:
 - [X] set up fonts [3/3]
   - [X] Korean
   - [X] Japanese
   - [X] Chinese
 - [X] keybindings to zoom in/zoom out
 - [ ] follow links by hitting enter
-- [ ] don't ask which shell to run in =term=
+- [X] don't ask which shell to run in =term=
 - [X] install which-key package
 
