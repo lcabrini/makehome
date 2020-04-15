@@ -202,6 +202,17 @@ I will do this when I get comfortable enough with Emacs keybindings
      web-mode-enable-auto-opening t
      web-mode-enable-auto-indentation t))
 #+end_src
+* Projectile
+#+begin_src emacs-lisp
+  (use-package projectile
+    :ensure t
+    :bind
+    (("C-p s" . projectile-switch-open-project)
+     ("C-x p" . projectile-switch-project))
+    :config
+    (projectile-global-mode)
+    (setq projectile-enable-caching t))
+#+end_src
 * EMMS
 #+BEGIN_SRC emacs-lisp
   (use-package emms
