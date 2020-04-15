@@ -11,10 +11,14 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1)
   ;;(load-theme 'wheatgrass t)
-  (use-package zenburn-theme
+  ;;(use-package zenburn-theme
+  ;;  :ensure t
+  ;;  :init
+  ;;  (load-theme 'zenburn t))
+  (use-package color-theme-sanityinc-tomorrow
     :ensure t
     :init
-    (load-theme 'zenburn t))
+    (load-theme 'sanityinc-tomorrow-blue))
   (set-language-environment "UTF-8")
   (global-hl-line-mode t)
   (global-prettify-symbols-mode t) 
