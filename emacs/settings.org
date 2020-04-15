@@ -18,7 +18,7 @@
   (use-package color-theme-sanityinc-tomorrow
     :ensure t
     :init
-    (load-theme 'sanityinc-tomorrow-blue))
+    (load-theme 'sanityinc-tomorrow-blue t))
   (set-language-environment "UTF-8")
   (global-hl-line-mode t)
   (global-prettify-symbols-mode t) 
