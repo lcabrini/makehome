@@ -1,2 +1,9 @@
-# makehome
-Make a happy home
+#+TITLE: Makehome
+
+* Tasks [0/1]
+- [ ] clean up
+* Updates
+<2020-08-28 ven> Bash configuration
+
+I changed my default shell to bash, since it seems to work best with Emacs. I
+also cleaned up a little and changed the README to be Org mode formatted.
