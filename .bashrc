@@ -9,7 +9,6 @@
 [[ -f /etc/bash.bashrc ]] && . /etc/bash.bashrc
 
 PS1='$ '
-
 [[ -d ~/.local/bin ]] && PATH=~/.local/bin:$PATH
 [[ -d ~/go/bin ]] && PATH=~/go/bin:$PATH
 [[ -d ~/bin ]] && PATH=~/bin:$PATH
