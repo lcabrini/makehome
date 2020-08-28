@@ -116,19 +116,19 @@ autoload -U add-zsh-hook
 add-zsh-hook chpwd do_venv
 
 # Taskwarrior inbox
-in() {
-    local lt
-    if [[ $# -gt 0 ]]; then
-        lt=$(task +inbox | grep inbox | tail -n 1 | awk '{ print $1}')
-        if [[ -n $lt ]]; then
-            task add +inbox "$@" depends:$lt
-        else
-            task add +inbox "$@"
-        fi
-    else
-        task +inbox unblocked
-    fi
-}
+#in() {
+#    local lt
+#    if [[ $# -gt 0 ]]; then
+#        lt=$(task +inbox | grep inbox | tail -n 1 | awk '{ print $1}')
+#        if [[ -n $lt ]]; then
+#            task add +inbox "$@" depends:$lt
+#        else
+#            task add +inbox "$@"
+#        fi
+#    else
+#        task +inbox unblocked
+#    fi
+#}
 
 # Completion system.
 autoload -Uz compinit

@@ -12,8 +12,10 @@ elif [[ $(uname) == "FreeBSD" ]]; then
 fi
 export SYS
 
-export GOPATH=$HOME/.go
-export GPODDER_HOME=~/.gPodder
+#export GOPATH=$HOME/.go
+#export GPODDER_HOME=~/.gPodder
+
+export GO111MODULE=on
 
 typeset -U path
 path=(~/bin ~/.go/bin $path)
