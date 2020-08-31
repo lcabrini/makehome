@@ -23,3 +23,4 @@ alias ll='ls -lh'
 alias la='ls -A'
 alias h=history
 alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
+
