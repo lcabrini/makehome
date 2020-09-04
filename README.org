@@ -1,7 +1,9 @@
 #+TITLE: Makehome
 
-* Tasks [0/1]
+* Tasks [1/3]
 - [ ] clean up
+- [X] automatically activate/deactivate python virtual environments
+- [ ] 
 * Updates
 <2020-08-28 ven> Bash configuration
 

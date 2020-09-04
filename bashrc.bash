@@ -12,7 +12,7 @@ PS1='$ '
 [[ -d ~/.local/bin ]] && PATH=~/.local/bin:$PATH
 [[ -d ~/go/bin ]] && PATH=~/go/bin:$PATH
 [[ -d ~/bin ]] && PATH=~/bin:$PATH
-EDITOR=emacs
+EDITOR="emacsclient -a "" -t"
 VISUAL=$EDITOR
 export EDITOR VISUAL
 
@@ -24,3 +24,37 @@ alias la='ls -A'
 alias h=history
 alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
 
+venv() {
+    wd=$PWD
+    old_VENV=$VENV
+    VENV=
+
+    while [[ $wd/ = $HOME/* ]]; do
+	if [[ -d $wd/.venv ]]; then
+	    VENV=$wd/.venv
+	    break
+	fi
+	wd=$(dirname $wd)
+    done
+
+    if [[ -z $old_VENV && -n $VENV ]]; then
+	. $VENV/bin/activate
+    elif [[ -n $old_VENV && -z $VENV ]]; then
+	deactivate
+    elif [[ $old_VENV != $VENV ]]; then
+	deactivate
+	. $VENV/bin/activate
+    fi
+    
+    unset wd old_VENV 
+}
+export VENV=
+
+chpwd() {
+    venv
+}
+chpwd
+
+cd() { builtin cd "$@" && chpwd; }
+pushd() { builtin cd "$@" && chpwd; }
+popd() { builtin popd "$@" && chpwd; }
