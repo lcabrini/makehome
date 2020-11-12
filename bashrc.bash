@@ -32,7 +32,7 @@ alias gc='git commit'
 alias gp='git push'
 alias gl='git log'
 alias gd='git diff'
-alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
+alias yd='youtube-dlc -f best -o "%(title)s-%(id)s.%(ext)s"'
 
 venv() {
     wd=$PWD
