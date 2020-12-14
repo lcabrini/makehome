@@ -21,8 +21,18 @@ eval "$(dircolors -b)"
 alias ls='ls --color=auto'
 alias ll='ls -lh'
 alias la='ls -A'
+alias tree='tree -CF'
+alias df='df -h'
 alias h=history
-alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
+alias m=make
+alias gb='go build'
+alias gst='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git log'
+alias gd='git diff'
+alias yd='youtube-dlc -f best -o "%(title)s-%(id)s.%(ext)s"'
 
 venv() {
     wd=$PWD
