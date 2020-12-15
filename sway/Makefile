@@ -1,4 +1,4 @@
-all: ~/.config/sway
+all: ~/.config/sway config
 	cp config ~/.config/sway
 
 ~/.config/sway:
