@@ -1,11 +1,84 @@
 #+TITLE: Makehome
 
-* Tasks [1/3]
-- [ ] clean up
-- [X] automatically activate/deactivate python virtual environments
-- [ ] 
+This is a collection of personal configuration files (so-called "dotfiles").
+
+I'm primarily an Emacs user, so perhaps I spend a bit less time configuring things
+like my $SHELL than the average GNU/Linux user. That being said, I do spend quite
+a bit of time in terminals, so I need a smooth experience at least.
+
+Don't expect to find my Emacs configuration here. I keep that in a [[https://github.com/lcabrini/.emacs.d][separate]]
+repository.
+
+After many years of using Zsh, I switched to Bash as my primary shell interpreter.
+This has nothing to do with Zsh not being good. I just felt like spending some
+time in Bash-land. And no, I'm not considering trying Fish. I took one glance at
+the featurelist on the [[https://fishshell.com][Fish homepage]] and quickly realized that this is not a shell
+for me.
+
+One of the most important things for me with a shell configuration is a prompt
+that does not eat up the whole screen. Excessive verbosity makes me seasick. I
+think a good compromise between frugality and pomp is a one character prompt,
+namely $ (I use % as my Zsh prompt). This in a very obvious way indicates that
+the shell is waiting for me to give it instructions to work with, without
+overwhelming me with information that I don't need (information that commands
+like pwd and whoami can give me, should I suffer a cerebreal meltdown).
+
+I'm not known to change window managers frequently. I've tried quite a few over
+the years, but there are only four that I've managed to stick with for longer
+periods of time: WindowMaker, Enlightenment (0.16), FVWM (my absolute favorite)
+and Openbox. However, recently I did decide to give EXWM a try. It seemed to make
+sense that somebody who spends 24/7 in Emacs would also let it manage windows.
+Great idea, but reality was perhaps not quite so great. Maybe if I had been a 
+bit more patient, but that is one virtue a don't have.
+
+But I really wanted to spend a little time with a tiling window manager. I'm sick
+of having to constantly shuffle windows across the screen. There is a lot to 
+choose from: i3, BSPWM, XMonad, Luftshe... whatever, etc. My needs are quite
+simple: don't get in my way, don't show any panels whatsover (I want the full
+screen for windows) and allow me to set up keybindings my way.
+
+In the end I decided to give [[https://swaywm.org/][Sway]] a go. It is a Wayland compositor and very 
+similar to i3. I'm quite happy with it. The default configuration does include
+one very annoying top panel that sticks out like a sore thumb, chomping away at
+my screen real estate, but fortunately it is easy to get rid of.
+
+I'm yet to clean up and import my Sway configuration. I still have my old
+Openbox configs here, in case anybody would be interested. 
+
+I also still have some Vim configuration here. I don't really use Vim at all 
+anymore, but I used it for a long time, before I figured out why Emacs is better
+in just about every way. I'll still keep my old configs here for the time being,
+just in case.
+
+I keep a ~/bin with some scripts that, in one way or the other reduce my
+workload. Most of them are a mess and need to be cleaned up. The same goes for
+everything else.
+
+* Tasks
+- General [0/1]
+  - [ ] clean up
+- Bash [1/3]
+  - [X] automatically activate/deactivate python virtual environments
+  - [ ] show fortune in interactive shells
+  - [ ] aliases for pacman commands
+- Sway [0/2]
+  - [ ] add sway configuration
+  - [ ] script+keybinding to position Anki and PCManFM for adding cards
 * Updates
-<2020-08-28 ven> Bash configuration
+** <2020-09-04 Fri> Aliases, Documentation
+
+I added a few more aliases to my Bash configuration. I also updated the 
+documentation a bit.
+
+** <2020-09-03 Thu> Activate/Deactivate Python Virtual Environments
+
+I implemented a function (similar to what I had for Zsh) that automatically
+activates/deactivates Python virtual environments as I enter a directory.
+
+Working on this, I realized how comfortable of a shell Zsh is. I was also
+reminded that there is always a way to make it work, if you really want to.
+
+** <2020-08-28 ven> Bash Configuration
 
 I changed my default shell to bash, since it seems to work best with Emacs. I
 also cleaned up a little and changed the README to be Org mode formatted.
