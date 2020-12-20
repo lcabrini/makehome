@@ -29,7 +29,7 @@ bindsym $mod+t exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 
-bindsym $mod+Shift+e exec 'emacsclient -nc'
+bindsym $mod+Shift+e exec emacs
 bindsym $mod+Shift+a exec QT_QPA_PLATFORM=xcb anki
 bindsym $mod+Shift+w exec chromium
 bindsym $mod+Shift+f exec pcmanfm
