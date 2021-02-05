@@ -1,10 +1,10 @@
 DEST = $(HOME)/bin
-SRC := $(wildcard *.zsh)
+SRC := $(wildcard *.bash)
 
 .PHONY: all
 all: $(DEST)
 	for script in $(SRC); do \
-	    install -c $$script $(DEST)/`basename $$script .zsh`; \
+	    install -c $$script $(DEST)/`basename $$script .bash`; \
 	done
 
 $(DEST):
