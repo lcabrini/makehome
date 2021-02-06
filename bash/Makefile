@@ -1,3 +1,3 @@
-all: bashrc.bash bash_profile.bash
+all: bashrc.bash profile.bash
 	cp bashrc.bash ~/.bashrc
-	cp bash_profile.bash ~/.bash_profile
+	cp profile.bash ~/.profile
