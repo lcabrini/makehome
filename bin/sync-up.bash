@@ -11,7 +11,7 @@ for target in $targets; do
     if [[ -n $line ]]; then
 	ip=$(echo $line | awk '{ print $1 }')
 	for dir in $dirs; do
-	    rsync -a $dir/ $ip:$dir
+	    rsync -a --exclude='*~' --exclude='#*#' --exclude='.#*' $dir/ $ip:$dir
 	done
     fi
 done
