@@ -21,7 +21,9 @@ before-sleep 'swaylock -f -c 000000'
 
 # Input configuration
 input "type:keyboard" {
-    xkb_options ctrl:swapcaps
+    xkb_layout us,it,gh
+    xkb_variant ,,ga
+    xkb_options grp:win_space_toggle,ctrl:swapcaps
 }
 
 # Keybindings
@@ -117,5 +119,7 @@ bar {
 }
 
 default_border pixel
+
+exec gammastep -l 5.55:-0.02
 
 include /etc/sway/config.d/*
