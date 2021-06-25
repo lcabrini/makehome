@@ -11,7 +11,7 @@ set $term alacritty
 set $menu 'wofi --show run'
 
 # Default wallpaper
-output * bg `ls -d ~/img/wp/* | shuf -n 1` fill
+output * bg `ls -d ~/wallpapers/* | shuf -n 1` fill
 
 # Idle configuration
 exec swayidle -w \
@@ -35,7 +35,7 @@ bindsym $mod+Shift+e exec emacs
 bindsym $mod+Shift+a exec QT_QPA_PLATFORM=xcb anki
 bindsym $mod+Shift+w exec firefox
 bindsym $mod+Shift+f exec pcmanfm
-bindsym $mod+Shift+b output * bg `ls -d ~/img/wp/* | shuf -n 1` fill
+bindsym $mod+Shift+b output * bg `ls -d ~/wallpapers/* | shuf -n 1` fill
 
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
