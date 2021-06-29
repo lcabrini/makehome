@@ -34,7 +34,7 @@ bindsym $mod+d exec $menu
 bindsym $mod+Shift+e exec emacs
 bindsym $mod+Shift+a exec QT_QPA_PLATFORM=xcb anki
 bindsym $mod+Shift+w exec firefox
-bindsym $mod+Shift+f exec pcmanfm
+bindsym $mod+Shift+f exec thunar
 bindsym $mod+Shift+b output * bg `ls -d ~/wallpapers/* | shuf -n 1` fill
 
 floating_modifier $mod normal
