@@ -64,8 +64,14 @@ export VENV=
 django_aliases() {
     if [[ -f manage.py ]]; then
 	alias pm='python manage.py'
+	alias pma='python manage.py startapp'
+	alias pmm='python manage.py makemigrations && python manage migrate'
+	alias pmr='python manage.py runserver'
     else
-	unalias pm
+	unalias pm 2> /dev/null
+	unalias pma 2> /dev/null
+	unalias pmm 2> /dev/null
+	unalias pmr 2> /dev/null
     fi
 }
 
