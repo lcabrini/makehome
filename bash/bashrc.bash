@@ -65,7 +65,7 @@ django_aliases() {
     if [[ -f manage.py ]]; then
 	alias pm='python manage.py'
 	alias pma='python manage.py startapp'
-	alias pmm='python manage.py makemigrations && python manage migrate'
+	alias pmm='python manage.py makemigrations && python manage.py migrate'
 	alias pmr='python manage.py runserver'
     else
 	unalias pm 2> /dev/null
@@ -84,3 +84,5 @@ chpwd
 cd() { builtin cd "$@" && chpwd; }
 pushd() { builtin cd "$@" && chpwd; }
 popd() { builtin popd "$@" && chpwd; }
+
+command -v fortune > /dev/null 2>&1 && fortune
