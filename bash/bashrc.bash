@@ -33,6 +33,7 @@ alias gp='git push'
 alias gl='git log'
 alias gd='git diff'
 alias yd='youtube-dlc -f best -o "%(title)s-%(id)s.%(ext)s"'
+#alias pm='python manage.py'
 
 venv() {
     wd=$PWD
@@ -60,8 +61,17 @@ venv() {
 }
 export VENV=
 
+django_aliases() {
+    if [[ -f manage.py ]]; then
+	alias pm='python manage.py'
+    else
+	unalias pm
+    fi
+}
+
 chpwd() {
     venv
+    django_aliases
 }
 chpwd
 
