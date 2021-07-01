@@ -32,7 +32,7 @@ alias gc='git commit'
 alias gp='git push'
 alias gl='git log'
 alias gd='git diff'
-alias yd='youtube-dlc -f best -o "%(title)s-%(id)s.%(ext)s"'
+alias yd='youtube-dl -f best -o "%(title)s-%(id)s.%(ext)s"'
 #alias pm='python manage.py'
 
 venv() {
@@ -67,11 +67,13 @@ django_aliases() {
 	alias pma='python manage.py startapp'
 	alias pmm='python manage.py makemigrations && python manage.py migrate'
 	alias pmr='python manage.py runserver'
+	alias pms='python manage.py createsuperuser'
     else
 	unalias pm 2> /dev/null
 	unalias pma 2> /dev/null
 	unalias pmm 2> /dev/null
 	unalias pmr 2> /dev/null
+	unalias pms 2> /dev/null
     fi
 }
 
